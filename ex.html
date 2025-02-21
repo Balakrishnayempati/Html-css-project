@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Countdown</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+        .container {
+            width: 80%;
+            height: 400px;
+            background: url('https://via.placeholder.com/800x400') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 22px;
+           
+        }
+        #countdown {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        .class
+        {
+            display: grid;
+            grid-template-rows: auto auto;
+            justify-content: center;
+        }
+        .main
+        {
+            display: flex;
+            gap: 100px;
+        }
+        .all
+
+        {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            text-align: center;
+            background-color: aqua;
+            width: 100%;
+            height: 100vh;
+            gap: 100px 10px;
+            
+        }
+        .in
+        {
+            margin-left: 0px;
+            height: 250px;
+            width: 200px;
+            align-content: start;
+            background-color: black;
+        }
+        .in img{
+            height: 100%;
+            width: 100%;
+        }
+        .all .in img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.all:hover .in img {
+    transform: scale(1.2); /* Increase the size on hover */
+}
+    </style>
+</head>
+<body>
+    <!--
+<div class="container">
+    <div class="content">
+        <p>Sale starts from</p>
+        <div id="countdown">00 Days 00 Months 00 Years</div>
+    </div>
+</div>
+<div class="main">
+<div class="class">
+    <div style="font-size: 140px;">00</div>
+    <div style="font-size: 35px;"><b>WEEKS</b></div>
+</div>
+<div class="class">
+    <div style="font-size: 140px;">00</div>
+    <div style="font-size: 35px;"><b>SECONDS</b></div>
+</div>
+<div class="class">
+    <div style="font-size: 140px;">00</div>
+    <div style="font-size: 40px;"><b>WEEKS</b></div>
+</div>
+<div class="class">
+    <div style="font-size: 140px;">00</div>
+    <div style="font-size: 40px;"><b>WEEKS</b></div>
+</div>
+<div class="class">
+    <div style="font-size: 140px;">00</div>
+    <div style="font-size: 40px;"><b>WEEKS</b></div>
+</div>
+
+
+</div>
+-->
+<div class="all">
+    <div><div class="in">
+        <img id="immm" src="https://frenchcrown.in/cdn/shop/products/7220-BD-BLE_4.jpg?v=1691064574&width=1800" height="100px" width="100px">
+<div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shirts</b></div>
+<div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings</div>
+<div style="display: flex;justify-content: center;font-size: 40px;background-color: rgba(22, 21, 21, 0.611); margin-top: 5px; border: 1px solid;"><i class="fa-solid fa-indian-rupee-sign"></i> 560 </div>
+    </div>
+
+    </div>
+    <div><div class="in">
+        <img src="https://frenchcrown.in/cdn/shop/products/7220-BD-BLE_4.jpg?v=1691064574&width=1800" height="100px" width="100px">
+<div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shirts</b></div>
+<div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings</div>
+<div style="display: flex;justify-content: center;font-size: 40px;background-color: rgba(22, 21, 21, 0.611); margin-top: 5px; border: 1px solid;"><i class="fa-solid fa-indian-rupee-sign"></i> 560 </div>
+    </div>
+
+    </div>
+    <div><div class="in">
+        <img src="https://frenchcrown.in/cdn/shop/products/7220-BD-BLE_4.jpg?v=1691064574&width=1800" height="100px" width="100px">
+<div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shirts</b></div>
+<div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings</div>
+<div style="display: flex;justify-content: center;font-size: 40px;background-color: rgba(22, 21, 21, 0.611); margin-top: 5px; border: 1px solid;"><i class="fa-solid fa-indian-rupee-sign"></i> 560 </div>
+    </div>
+
+    </div>
+    <div><div class="in">
+        <img src="https://frenchcrown.in/cdn/shop/products/7220-BD-BLE_4.jpg?v=1691064574&width=1800" height="100px" width="100px">
+<div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shirts</b></div>
+<div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings</div>
+<div style="display: flex;justify-content: center;font-size: 40px;background-color: rgba(22, 21, 21, 0.611); margin-top: 5px; border: 1px solid;"><i class="fa-solid fa-indian-rupee-sign"></i> 560 </div>
+    </div>
+
+    </div>
+    <div><div class="in">
+        <img src="https://frenchcrown.in/cdn/shop/products/7220-BD-BLE_4.jpg?v=1691064574&width=1800" height="100px" width="100px">
+<div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shirts</b></div>
+<div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings</div>
+<div style="display: flex;justify-content: center;font-size: 40px;background-color: rgba(22, 21, 21, 0.611); margin-top: 5px; border: 1px solid;"><i class="fa-solid fa-indian-rupee-sign"></i> 560 </div>
+    </div>
+
+    </div>
+    <div><div class="in">
+        <img src="https://frenchcrown.in/cdn/shop/products/7220-BD-BLE_4.jpg?v=1691064574&width=1800" height="100px" width="100px">
+<div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shirts</b></div>
+<div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings</div>
+<div style="display: flex;justify-content: center;font-size: 40px;background-color: rgba(22, 21, 21, 0.611); margin-top: 5px; border: 1px solid;"><i class="fa-solid fa-indian-rupee-sign"></i> 560 </div>
+    </div>
+
+    </div>
+    <div><div class="in">
+        <img src="https://frenchcrown.in/cdn/shop/products/7220-BD-BLE_4.jpg?v=1691064574&width=1800" height="100px" width="100px">
+<div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shirts</b></div>
+<div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings</div>
+<div style="display: flex;justify-content: center;font-size: 40px;background-color: rgba(22, 21, 21, 0.611); margin-top: 5px; border: 1px solid;"><i class="fa-solid fa-indian-rupee-sign"></i> 560 </div>
+    </div>
+
+    </div>
+    <div><div class="in">
+        <img src="https://frenchcrown.in/cdn/shop/products/7220-BD-BLE_4.jpg?v=1691064574&width=1800" height="100px" width="100px">
+<div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shirts</b></div>
+<div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings</div>
+<div style="display: flex;justify-content: center;font-size: 40px;background-color: rgba(22, 21, 21, 0.611); margin-top: 5px; border: 1px solid;"><i class="fa-solid fa-indian-rupee-sign"></i> 560 </div>
+    </div>
+
+    </div>
+    
+    
+</div>
+
+</body>
+</html>

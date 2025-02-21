@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+  .nav
+  {
+   
+    display: flex;
+    padding: 12px;
+    font-size: 16px;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+   
+   
+    
+  }
+  .hre
+  {
+    display: flex;
+    gap: 30px;
+  }
+  #fashion
+  {
+   
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+
+  }
+  .hre>a:hover
+  {
+    background-color: rgb(12, 13, 13);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 4px;
+    color: aliceblue;
+    text-decoration: none;
+
+  }
+  .bar>a:hover{
+    
+    
+    padding: 2px;
+    color: rgb(79, 80, 80);
+  }
+  nav a{
+    text-decoration: none;
+    color: black;
+  }
+  .bar
+  {
+    display: flex;
+    gap: 20px;
+  }
+  .caro
+  {
+    margin-top: 60px;
+    height: 700px;
+    width: 100%;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .item>img
+  {
+    width:100%;
+  }
+  .acc
+  {
+    
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-evenly;
+   
+  }
+  .acc>div img{
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    width: 650px;
+  }
+  .acc {
+            overflow: hidden;  
+            position: relative;
+            width: 90%;
+            margin-left: 70px;
+        }
+        .immatter
+        {
+          position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background: rgba(20, 20, 20, 0.6); 
+            padding: 10px 30px;
+            
+        }
+        .accmatter
+        {
+          position: absolute;
+          top: 50%;
+          right:15% ;
+          transform: translate(-30%, -50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 30px;
+            overflow: hidden;
+            background: rgba(20, 20, 20, 0.6); 
+
+        }
+  .acc img {
+            transition: transform 2s ease-in-out; 
+        }
+
+        .acc:hover img {
+            transform: scale(0.7);
+        }
+        .count
+        {
+          margin-top: 10px;
+          background-image: url("https://images.fastfashionnews.co.uk/wp-content/uploads/2023/09/assorted-mens-fashion-accessories.png");
+           width: 100%;
+           height: 500px;
+           background-repeat: no-repeat;
+           background-size: 100% 100%;
+           overflow: hidden;
+           
+           
+        }
+        .sale
+        {
+          color: rgb(245, 239, 239);
+          font-size:50px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          text-align: center;margin-top: 120px;
+          text-shadow: 0px 0px 10px rgba(251, 251, 251, 0.4);
+        }
+        .class
+        {
+            display: grid;
+            grid-template-rows: auto auto;
+            justify-content: center;
+            color: white;
+            text-shadow: 0px 0px 10px rgba(251, 251, 251, 0.4);
+            text-align: center;
+        }
+        .main
+        {
+            display: flex;
+            gap: 60px;
+            text-shadow: 0px 0px 10px rgba(251, 251, 251, 0.4);
+            justify-content: center;
+            text-align: center;
+        }
+        .all .in img {
+    transition: transform 2s ease-in-out;
+}
+
+.all:hover .in img {
+    transform: scale(0.7);
+}
+
+        .class>div:hover{
+          transform: rotatex(360deg);
+          transition-duration: 2s;
+          color: rgb(15, 63, 160);
+          
+        }
+        .sale:hover{
+          color: rgb(191, 32, 32);
+          transition-duration: 1s;
+        }
+        .check
+        {
+          margin-top: 60px;
+          text-align: center;
+          text-shadow: 0px 0px 10px;
+          
+        }
+        .naa
+        {
+          margin-top: 10px;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          
+        }
+        .naa a{
+          text-decoration: none;
+          border: 1px solid black;
+          color: black;
+          padding: 10px;
+          border-radius: 10px;
+          opacity: 0.6;
+          margin-top: 20px;
+        }
+        .naa a:hover{
+          background-color: rgba(236, 81, 15, 0.928);
+          color: white;
+          opacity: 0.8;
+        }
+        .all
+
+        {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: space-around;
+            width: 100%;
+            gap: 200px 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            
+        }
+        .in
+        {
+            margin-left: 0px;
+            height: 250px;
+            width: 200px;
+            align-content: start;
+           
+        }
+        .in img{
+            height: 100%;
+            width: 100%;
+        }
+        .ov:hover
+        {
+          font-size: 35px;
+          color: white;
+          
+        }
+      .discount
+      {
+         
+         height: 600px;
+         width: 100%;
+         margin-top:15%;
+         background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA3L3Vwd2s2MTg0MzM0NC13aWtpbWVkaWEtaW1hZ2UtbGtocWw2YWIuanBn.jpg");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+         
+          
+       }
+       .subs
+       {
+        float: right;
+        font-size:55px ;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 50px;
+        text-shadow: 0px 0px 25px black;
+        text-transform: uppercase;
+        margin-right: 40px;
+      
+       }
+       .logo>a{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.992);
+       }
+       .pay
+       {
+    
+        height: 200px;
+        width: 100%;
+        margin-top: 7%;
+       }
+       .paydiv
+       {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        justify-content: space-around;
+       }
+       .paydiv img{
+        opacity: 0.7;
+        filter: grayscale(50%);
+       }
+       .card
+    {
+        height:400px;
+        width: 35%;
+        background-color:rgba(188, 183, 183, 0.291);
+        
+    }
+    .main
+    {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .card:hover .fa-solid {
+       color: red;
+    }
+      
+    .product
+        {
+            background-image: url("https://png.pngtree.com/background/20230519/original/pngtree-store-with-hanging-clothing-in-a-high-end-environment-picture-image_2654941.jpg");
+            width: 100%;
+            height: 550px;
+            filter: grayscale(100%);
+            display: flex;
+            justify-content: space-around;     
+        }
+        .product>div{    
+            height: 400px;
+            width: 30%;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .fot
+        
+        {
+            background-color: rgba(0, 0, 0, 0.946);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            position: sticky;
+        }
+        div .rate:hover
+        {
+            color: black;
+            font-size: 30px;
+            border-radius: 20px;
+        }
+        .logo a:hover{
+          color: rgba(255, 72, 0, 0.807);
+          font-size: 80px;
+        }
+        .logo #face:hover{
+          color: rgba(0, 0, 255, 0.736);
+        }
+        .logo #twit:hover{
+          color: rgb(0, 4, 255);
+        }
+        .pay .paydiv
+        {
+          transition: 5s ease-in-out;
+        }
+        .pay:hover .paydiv{
+          transform: translate(50%);
+        }
+        @media screen and (width>576px) and (width<1160px)
+        {
+
+          *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+  .nav
+  {
+   
+    display: flex;
+    padding: 12px;
+    font-size: 16px;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgb(250, 247, 247);
+   
+   
+    
+  }
+  .hre
+  {
+    display: flex;
+    gap: 50px;
+    font-size: 20px;
+  }
+  #fashion
+  {
+   
+            font-size: 20px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #333;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+
+  }
+  .hre>a:hover
+  {
+    background-color: rgb(12, 13, 13);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 4px;
+    color: aliceblue;
+    text-decoration: none;
+
+  }
+  .bar>a:hover{
+    
+    
+    padding: 2px;
+    color: rgb(79, 80, 80);
+  }
+  nav a{
+    text-decoration: none;
+    color: black;
+  }
+  .bar
+  {
+    display: flex;
+    gap: 20px;
+    display: none;
+    
+  }
+  .caro
+  {
+    margin-top: 60px;
+    height:700px;
+    width: 1500px;
+  }
+  .item>img
+  {
+    width:100%;
+  }
+  .op
+  {
+    
+    width: 1500px;
+    height: 410px;
+    margin-left: 10px;
+  }
+  .op img
+  {
+   margin-top:30px;
+  }
+  .acc div img
+  {
+    height: 340px;
+    width: 650px;
+    
+  }
+  .acc
+  {
+
+    top: 10px;
+    
+  }
+  .immatter
+        {
+          position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background: rgba(20, 20, 20, 0.6); 
+            padding: 10px 30px;
+            
+        }
+        .accmatter
+        {
+          position: absolute;
+          top: 50%;
+          right:15% ;
+          transform: translate(-30%, -50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 30px;
+            overflow: hidden;
+            background: rgba(20, 20, 20, 0.6); 
+
+        }
+  .acc img {
+            transition: transform 5s ease-in-out; 
+        }
+
+        .acc:hover img {
+            transform: scale(0.7);
+        }
+  
+        .count
+        {
+          margin-top: 10px;
+          background-image: url("https://images.fastfashionnews.co.uk/wp-content/uploads/2023/09/assorted-mens-fashion-accessories.png");
+           width: 1500px;
+           height: 500px;
+           background-repeat: no-repeat;
+           background-size: 100% 100%;
+           overflow: hidden;
+           
+           
+        }
+        .sale
+        {
+          color: rgb(245, 239, 239);
+          font-size:40px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          text-align: center;
+          margin-top: 120px;
+          text-shadow: 0px 0px 10px rgba(251, 251, 251, 0.4);
+        }
+        .class
+        {
+            display: grid;
+            grid-template-rows: auto auto;
+            justify-content: center;
+            color: white;
+            text-shadow: 0px 0px 10px rgba(251, 251, 251, 0.4);
+            text-align: center;
+        }
+        .main
+        {
+            display: flex;
+            gap: 60px;
+            text-shadow: 0px 0px 10px rgba(251, 251, 251, 0.4);
+            justify-content: center;
+            text-align: center;
+        }
+        .all .in img {
+    transition: transform 2s ease-in-out;
+}
+
+.all:hover .in img {
+    transform: scale(0.7);
+}
+
+        .class>div:hover{
+          transform: rotatex(360deg);
+          transition-duration: 2s;
+          color: rgb(15, 63, 160);
+          
+        }
+        .sale:hover{
+          color: rgb(191, 32, 32);
+          transition-duration: 1s;
+        }
+        .check
+        {
+          margin-top:40px;
+          text-align: center;
+          text-shadow: 0px 0px 10px;
+          width: 1500px;
+          
+        }
+        .naa
+        {
+          margin-top: 10px;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          width: 1500px;
+          
+        }
+        .naa a{
+          text-decoration: none;
+          border: 1px solid black;
+          color: black;
+          padding: 10px;
+          border-radius: 10px;
+          opacity: 0.6;
+          margin-top: 20px;
+        }
+        .naa a:hover{
+          background-color: rgba(236, 81, 15, 0.928);
+          color: white;
+          opacity: 0.8;
+        }
+        .all
+
+        {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-evenly;
+            width: 1500px;
+            gap: 200px 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            
+        }
+        .all div #non
+        {
+          display: none;
+        }
+        .all .in #size
+        {
+          font-size:30px;
+          gap: 35px;
+        }
+        .all .in #sizes
+        {
+          font-size:30px;
+          gap: 50px;
+        }
+
+        .in
+        {
+            margin-left: 0px;
+            height: 380px;
+            width: 330px;
+            align-content: start;
+           
+        }
+        .in img{
+            height: 100%;
+            width: 100%;
+        }
+        .ov:hover
+        {
+          font-size: 35px;
+          color: white;
+          
+        }
+      .discount
+      {
+         
+         height: 600px;
+         width: 1500px;
+         margin-top:2%;
+         background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA3L3Vwd2s2MTg0MzM0NC13aWtpbWVkaWEtaW1hZ2UtbGtocWw2YWIuanBn.jpg");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+         
+          
+       }
+       .subs
+       {
+        float: right;
+        font-size:60px ;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 50px;
+        text-shadow: 0px 0px 25px black;
+        text-transform: uppercase;
+        margin-right: 40px;
+      
+       }
+       .logo>a{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.992);
+       }
+       .pay
+       {
+    
+        height: 200px;
+        width: 1500px;
+        margin-top: 7%;
+       }
+       .paydiv
+       {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        justify-content: space-around;
+       }
+       .paydiv img{
+        opacity: 0.7;
+        filter: grayscale(50%);
+       }
+       .card
+    {
+        height:500px;
+        width: 35%;
+        background-color:rgba(188, 183, 183, 0.291);
+        
+    }
+    .main
+    {
+        display: flex;
+        justify-content: space-evenly;
+        width: 1500px;
+    }
+    .card:hover .fa-solid {
+       color: red;
+    }
+      
+    .product
+        {
+            background-image: url("https://png.pngtree.com/background/20230519/original/pngtree-store-with-hanging-clothing-in-a-high-end-environment-picture-image_2654941.jpg");
+            width: 1500px;
+            height: 600px;
+            filter: grayscale(100%);
+            display: flex;
+            justify-content: space-around;     
+        }
+        .product>div{    
+            height: 400px;
+            width: 30%;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .fot
+        
+        {
+            background-color: rgba(0, 0, 0, 0.946);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 1500px;
+            position: sticky;
+        }
+        div .rate:hover
+        {
+            color: black;
+            font-size: 30px;
+            border-radius: 20px;
+        }
+        .logo a:hover{
+          color: rgba(255, 72, 0, 0.807);
+          font-size: 80px;
+        }
+        .logo #face:hover{
+          color: rgba(0, 0, 255, 0.736);
+        }
+        .logo #twit:hover{
+          color: rgb(0, 4, 255);
+        }
+        .pay .paydiv
+        {
+          transition: 5s ease-in-out;
+        }
+        .pay:hover .paydiv{
+          transform: translate(50%);
+        }
+   
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div id="fashion" class="animate__animated animate__heartBeat">MEN<sup>S</sup> FASHION</div>
+        <div class="hre" >
+        <a href="">Home</a>
+        <a href="">Categories</a>
+        <a href="">Product</a>
+        <a href="">Subscribe</a>
+        <a href="">Partners</a>
+        <a href="">Shop </a>
+        <a href="">Shipment</a></div>
+        <div class="bar" ><a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+    <a href=""><i class="fa-brands fa-instagram"></i></a>
+    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a></div>
+    </nav>
+    
+    <div class="caro">  
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+    
+        <div class="carousel-inner" style="height: 700px; width: 100%;">
+          <div class=" item active animate__animated animate__bounce">
+            <img src="https://images.unsplash.com/photo-1543322748-33df6d3db806?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="shoping_image">
+          </div>
+    
+          <div class="item animate__animated animate__shakeY">
+            <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="shoping_image">
+          </div>
+        
+          <div class="item animate__animated animate__swing">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="shoping_image">
+          </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="op">
+      <div class="acc">
+        <div><img src="https://staranddaisy.in/wp-content/uploads/2023/06/drying_recks_113mb_8.jpg"></div>
+        <div class="immatter"> <a href="#" style="text-decoration: none;color: white;">Shirts</a> </div>
+        <div><img src="https://bobbysfashions.com/wp-content/uploads/2018/05/Style-Accessories-for-Men.jpg"></div>
+          <div class="accmatter"> <a href="#" style="text-decoration: none;color: white;"> Accessories </a> </div>
+      </div>
+    </div>
+    
+    <div class="count">
+      <div class="sale">Sales for this fall starts in</div>
+      <div class="main">
+        <div class="class">
+            <div style="font-size: 110px;">00</div>
+            <div style="font-size: 20px;"><b>WEEKS</b></div>
+        </div>
+        <div class="class">
+            <div style="font-size: 110px;">00</div>
+            <div style="font-size: 20px;"><b>DAYS</b></div>
+        </div>
+        <div class="class">
+            <div style="font-size: 110px;">00</div>
+            <div style="font-size: 20px;"><b>HOURS</b></div>
+        </div>
+        <div class="class">
+            <div style="font-size: 110px;">00</div>
+            <div style="font-size: 20px;"><b>MINUTES</b></div>
+        </div>
+        <div class="class">
+            <div style="font-size: 110px;">00</div>
+            <div style="font-size: 20px;"><b>SECONDS</b></div>
+        </div>
+          </div>
+      </div>
+      
+      
+    <div class="check">
+      <div style="font-size: 50px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Check out what's new</div>
+      <div style="font-size: 30px;color: rgba(86, 86, 86, 0.884);">Latest of the trend we have to offer</div>
+    </div>
+    <div class="naa">
+      <a href="#">All</a><a href="#">Accessories</a><a href="#">Clothings</a><a href="#">Shirts</a><a href="#">Shoes</a><a href="#">Watches</a>
+    </div>
+
+    <div class="all">
+      <div><div class="in">
+          <img src="https://frenchcrown.in/cdn/shop/products/7220-BD-BLE_4.jpg?v=1691064574&width=1800" height="100px" width="100px">
+  <div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shirts</b></div>
+  <div id="sizes" style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Shirts <a href=""><i style="margin-left: 140px;color: black;" class="fa-solid fa-cart-shopping"></i></a></div>
+  <div style="display: flex;justify-content: center;font-size: 25px;background-color: rgba(22, 21, 21, 0.411); margin-top: 2px; border: 1px solid;"><b class="ov">800</b> </div>
+      </div>
+  
+      </div>
+      <div><div class="in">
+          <img src="https://justintime.in/cdn/shop/files/download_ee33da3c-086f-4175-b6fe-cd2976f3b38c.jpg?v=1712049568&width=1946" height="100px" width="100px">
+  <div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Striped watch</b></div>
+  <div id="size" style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Watches <a href=""><i style="margin-left: 120px;color: black;" class="fa-solid fa-cart-shopping"></i></a></div>
+  <div style="display: flex;justify-content: center;font-size: 25px;background-color: rgba(22, 21, 21, 0.411); margin-top: 2px; border: 1px solid;"> <b class="ov">1600</b> </div>
+      </div>
+  
+      </div>
+      <div><div class="in">
+          <img src="https://followbrand.com/cdn/shop/products/F13811_SIMPLE_CAP_BLACK_313888_02.jpg?v=1670003748&width=1440" height="100px" width="100px">
+  <div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Simple hat</b></div>
+  <div id="size" style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Accessories <a href=""><i style="margin-left: 100px;color: black;" class="fa-solid fa-cart-shopping"></i></a></div>
+  <div style="display: flex;justify-content: center;font-size: 25px;background-color: rgba(22, 21, 21, 0.411); margin-top: 2px; border: 1px solid;"> <b class="ov">300</b> </div>
+      </div>
+  
+      </div>
+      <div><div class="in">
+          <img src="https://www.thewalkdeal.com/cdn/shop/products/Belive-Black.jpg?v=1640675713" height="100px" width="100px">
+  <div style="display: flex;font-size: 25px;margin-top: 10px;"><b>T-Shirts</b></div>
+  <div id="size" style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings <a href=""><i style="margin-left: 120px;color: black;" class="fa-solid fa-cart-shopping"></i></a></div>
+  <div style="display: flex;justify-content: center;font-size: 25px;background-color: rgba(22, 21, 21, 0.411); margin-top: 2px; border: 1px solid;"> <b class="ov">500</b> </div>
+      </div>
+  
+      </div>
+      <div><div class="in">
+          <img src="https://www.bxxyshoe.in/cdn/shop/products/blue_5.jpg?v=1651754172" height="100px" width="100px">
+  <div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Formal shoes</b></div>
+  <div id="sizes" style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Shoes <a href=""><i style="margin-left: 140px;color: black;" class="fa-solid fa-cart-shopping"></i></a></div>
+  <div style="display: flex;justify-content: center;font-size: 25px;background-color: rgba(22, 21, 21, 0.411); margin-top: 2px; border: 1px solid;"><b class="ov">2500</b> </div>
+      </div>
+  
+      </div>
+      <div><div class="in">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWktWrA_r_0t52aDiZt-vtHwn62IOr-rFx9WeS13CRqFb-iFLvhHNS3_5bdgRAV43uJlI&usqp=CAU" height="100px" width="100px">
+  <div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Shoulder bag</b></div>
+  <div id="size" style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Accessories <a href=""><i style="margin-left: 100px;color: black;" class="fa-solid fa-cart-shopping"></i></a></div>
+  <div style="display: flex;justify-content: center;font-size: 25px;background-color: rgba(22, 21, 21, 0.411); margin-top: 2px; border: 1px solid;"> <b class="ov">600</b> </div>
+      </div>
+  
+      </div>
+      <div><div id="non" class="in">
+          <img src="https://empathicworkplace.com/wp-content/uploads/2016/01/Item_6_3.jpg" height="100px" width="100px">
+  <div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Fantasy pants</b></div>
+  <div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Clothings <a href=""><i style="margin-left: 120px;color: black;" class="fa-solid fa-cart-shopping"></i></a></div>
+  <div style="display: flex;justify-content: center;font-size: 25px;background-color: rgba(22, 21, 21, 0.411); margin-top: 2px; border: 1px solid;"><b class="ov">400</b></div>
+      </div>
+  
+      </div>
+      <div><div id="non" class="in">
+          <img src="https://s3.zeelool.com/admin/product/image/d2e15d4b9aeb582b1be5e117d28e2327.jpg?im=Resize%2Cwidth%3D800" height="100px" width="100px">
+  <div style="display: flex;font-size: 25px;margin-top: 10px;"><b>Black glasses</b></div>
+  <div style="display: flex; margin-top: 5px; color: rgb(6, 6, 6);">Accessories <a href=""><i style="margin-left: 100px;color: black;" class="fa-solid fa-cart-shopping"></i></a></div>
+  <div style="display: flex;justify-content: center;font-size: 25px;background-color: rgba(22, 21, 21, 0.411); margin-top: 2px; border: 1px solid;"> <b class="ov">250</b></div>
+      </div>
+      </div>
+      </div>
+      <div class="discount">
+        <div class="subs">
+        <div>Subscribe to get more discounts</div> 
+        <div>coupons and new offers.</div>
+        <div style="font-size: 30px;color: rgb(255, 255, 255);font-family: 'Times New Roman', Times, serif;text-shadow: 0px 0px 5px black;text-transform: lowercase;">Find Latest Coupons & Offers for Online Shopping Site in men's fashion.</div>
+        <input style="font-size: 45px;border-radius: 20px;color: black;margin-top: 30px;box-shadow: 0px 0px 10px white;" placeholder=" Enter your mail..." type="email" name="email" id="email"><input style="background-color: rgb(255, 72, 0);border-radius: 22px;margin-left: 10px; box-shadow: 0px 0px 10px white;font-size: 45px;" type="button" value="Subscribe">
+      <div style="margin-top: 40px;">Follow us on </div>
+      <div class="logo"><a href=""><i id="twit"  class="fa-brands fa-twitter"></i> </a><a id="face" href=""><i class="fa-brands fa-facebook"></i> </a> <a href=""><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      </div>
+ <div class="pay">
+  <div class="paydiv">
+  <div><img src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Online-shop-shopping-shop-logo-by-DEEMKA-STUDIO-3-580x406.jpg" height="200px" width="250px"></div>
+  <div><img src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Online-shop-shopping-shop-logo-by-DEEMKA-STUDIO-312x208.jpg" height="200px" width="250px"></div>
+  <div><img src="https://static.vecteezy.com/system/resources/thumbnails/008/801/949/small_2x/shopping-trolley-icon-shopping-trolley-design-illustration-trolley-icon-simple-sign-vector.jpg" height="200px" width="250px"></div>
+  <div><img src="https://www.creativefabrica.com/wp-content/uploads/2019/02/Online-shop-shopping-shop-logo-by-DEEMKA-STUDIO-2.jpg" height="200px" width="250px"></div>
+  <div><img src="https://images-platform.99static.com//lPRxXpwQRJ8TILncLSFWBoE6b34=/295x281:1680x1667/fit-in/500x500/99designs-contests-attachments/108/108066/attachment_108066965" height="200px" width="250px"></div>
+  
+ </div>
+ </div>
+ <div style="margin-top: 120px;" class="main">
+  <div class="card">
+    <div style="font-size: 40px;"><i class="fa-solid fa-credit-card"></i></div>
+   <div style="font-size: 30px;margin-top: 20px;"><b>Payment method</b></div>
+   <div style="margin-top: 30px;font-size: 18px;">
+      <i>Shop with ease card payments accepted here!
+      Pay conveniently with your card while shopping with us.
+      We accept all major credit and debit cards for shopping.
+      Swipe, tap, or insert—card payments welcome!
+      Cashless shopping made easy! Pay with your card.
+      No cash? No problem! We accept card payments.</i>
+  <div><img style="margin-top: 30px;" src="https://jevelin.shufflehound.com/shop1/wp-content/uploads/sites/9/2016/11/payment_methods.jpg" height="50px" width="280px">
+  </div>
+   </div>
+  </div>
+  <div class="card">
+      <div style="font-size: 40px;"><i class="fa-solid fa-plane-departure"></i></div>
+     <div style="font-size: 30px;margin-top: 20px;"><b>Cash On Delivery</b></div>
+     <div style="margin-top: 30px;font-size: 18px;"><i>We gladly accept card payments for all your shopping needs."
+      Shopping with us is easy and convenient! We offer multiple payment options, including online payments and Cash on Delivery (COD) also. If you prefer to pay only after receiving your order, simply select the COD option at checkout. </i></div>
+     <div style="margin-top: 10px;">
+      Cash on Delivery
+      <p style="font-size: 10px;">When choosing Cash on Delivery (COD), please follow these simple instructions to ensure a smooth shopping experience. First, select the COD option at checkout to pay when you receive your order. Make sure your address and contact details are accurate to avoid any delivery delays. </p>
+  </details></div>
+  </div>
+ </div>
+ <div style="margin-top: 80px;" class="product">
+  <div style="color: white;">
+      <div style="font-size: 70PX; text-shadow: 0px 0px 10px white;">MEN'S FASHION</div>
+      <div><p style="text-shadow: 0px 0px 2px white;">At Men's Fashion, we also offer a wide range of men’s accessories, including watches, sunglasses, wallets, belts, caps, and more to complete your look. Our easy-to-use website, secure payment options, and fast delivery make shopping hassle-free. Whether you're looking for casual wear, formal attire, or trendy streetwear, Men's Fashion has it all.</p></div>
+  </div>
+  <div style="color: white;">
+      <div style="float: left;font-size: 30px;text-shadow: 0px 0px 0px white ;">Products</div>
+      <div style="margin-top: 60px;"><img src="https://followbrand.com/cdn/shop/products/F13811_SIMPLE_CAP_BLACK_313888_02.jpg?v=1670003748&width=1440" height="140px" width="140px" style="float: left;"><span style="font-size: 30px;">Simple hat</span>
+      <div style="margin-top: 25px;"><b class="rate" style="background-color:rgba(175, 170, 170, 0.856);padding: 10px 50px;">300</b></div>
+      <div style="margin-top: 20px;text-shadow: 0px 0px 10px white;"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+      </div>
+      <div style="margin-top: 90px;"><img src="https://justintime.in/cdn/shop/files/download_ee33da3c-086f-4175-b6fe-cd2976f3b38c.jpg?v=1712049568&width=1946" height="140px" width="140px" style="float: left;"><span style="font-size: 30px;">Striped Watch</span>
+          <div style="margin-top: 25px;"><b class="rate" style="background-color: rgba(175, 170, 170, 0.856);padding: 10px 50px;">1200</b></div>
+          <div style="margin-top: 20px;text-shadow: 0px 0px 10px white;"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+          </div>
+  </div>
+  <div style="color: white;">
+      <div style="float: left;font-size: 30px;text-shadow: 0px 0px 0px white ;">Top rated Products</div>
+      <div style="margin-top: 60px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWktWrA_r_0t52aDiZt-vtHwn62IOr-rFx9WeS13CRqFb-iFLvhHNS3_5bdgRAV43uJlI&usqp=CAU" height="140px" width="140px" style="float: left;"><span style="font-size: 30px;">Shoulder Bag</span>
+      <div style="margin-top: 25px;"><b class="rate" style="background-color:rgba(175, 170, 170, 0.856);padding: 10px 50px;">600</b></div>
+      <div style="margin-top: 20px;text-shadow: 0px 0px 10px white;"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+      </div>
+      <div style="margin-top: 90px;"><img src="https://www.thewalkdeal.com/cdn/shop/products/Belive-Black.jpg?v=1640675713" height="140px" width="140px" style="float: left;"><span style="font-size: 30px;">T-shirt</span>
+      <div style="margin-top: 25px;"><b class="rate" style="background-color: rgba(175, 170, 170, 0.856);padding: 10px 50px;">500</b></div>
+      <div style="margin-top: 20px;text-shadow: 0px 0px 10px white;"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+
+  </div>
+  </div>
+</div>
+
+<div style="margin-top: 30px;" class="fot">
+  <b> &copy; Designed by Bala krishna Yempati</b>
+  </div>
+</body>
+</html>
